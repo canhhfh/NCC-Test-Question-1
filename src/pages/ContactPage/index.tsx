@@ -25,7 +25,12 @@ const ContactPage = (props: Props) => {
       >
         <Sidebar />
       </div>
-      <div className={styles["main"]}>
+      <div
+        className={classNames(
+          styles["main"],
+          isOpen ? styles["main-hidden"] : styles[""]
+        )}
+      >
         <div className={styles["content"]}></div>
         <div className={styles["footer"]}>
           <Footer />

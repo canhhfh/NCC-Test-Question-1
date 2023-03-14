@@ -24,12 +24,17 @@ const HomePage = (props: Props) => {
       <div
         className={classNames(
           styles["sidebar"],
-          isOpen ? styles["sidebar-open"] : styles["sidebar-close"]
+          isOpen ? styles["sidebar-open"] : styles[""]
         )}
       >
         <Sidebar />
       </div>
-      <div className={styles["main"]}>
+      <div
+        className={classNames(
+          styles["main"],
+          isOpen ? styles["main-hidden"] : styles[""]
+        )}
+      >
         <div className={styles["content"]}>
           <div className={styles["logo"]}>
             <img src={logo} alt="" />

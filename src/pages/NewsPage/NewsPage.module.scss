@@ -55,6 +55,10 @@
       display: none;
     }
 
+    .main-hidden {
+      display: none !important;
+    }
+
     .main {
       display: flex;
       flex-direction: column;
@@ -94,6 +98,10 @@
 
     .sidebar-close {
       display: none;
+    }
+
+    .main-hidden {
+      display: none !important;
     }
 
     .main {
