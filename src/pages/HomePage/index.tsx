@@ -5,13 +5,28 @@ import logo from "../../assets/images/logo.svg";
 import image1 from "../../assets/images/image1.svg";
 import image2 from "../../assets/images/image2.svg";
 import image3 from "../../assets/images/image3.svg";
+import menuIcon from "../../assets/images/menu.png";
+import { useState } from "react";
+import classNames from "classnames";
 
 type Props = {};
 
 const HomePage = (props: Props) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleClickMenuIcon = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div className={styles["container"]}>
-      <div className={styles["sidebar"]}>
+      <div className={styles["menubar"]}>
+        <img src={menuIcon} alt="" onClick={handleClickMenuIcon} />
+      </div>
+      <div
+        className={classNames(
+          styles["sidebar"],
+          isOpen ? styles["sidebar-open"] : styles["sidebar-close"]
+        )}
+      >
         <Sidebar />
       </div>
       <div className={styles["main"]}>

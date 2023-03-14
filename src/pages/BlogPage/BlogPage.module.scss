@@ -1,36 +1,12 @@
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .h1 {
-    color: red;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .h1 {
-    color: blue;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .h1 {
-    color: green;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .h1 {
-    color: yellow;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1024px) {
   .container {
     display: flex;
     position: relative;
+
+    .menubar {
+      display: none;
+    }
+
     .sidebar {
       width: 150px;
       position: fixed;
@@ -42,14 +18,94 @@
       flex-direction: column;
       min-height: 100vh;
       width: 100%;
-      .content {
-      }
 
       .footer {
         height: 79px;
         margin-top: auto;
         border-top: solid 1px #dedede;
         padding-left: 129px;
+        line-height: 79px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    .menubar {
+      height: 48px;
+      background-color: #191718;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      img {
+        width: 28px;
+      }
+    }
+
+    .sidebar {
+      display: none;
+    }
+
+    .sidebar-open {
+      display: block;
+    }
+
+    .sidebar-close {
+      display: none;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .footer {
+        height: 79px;
+        text-align: center;
+        margin-top: auto;
+        border-top: solid 1px #dedede;
+        line-height: 79px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    .menubar {
+      height: 48px;
+      background-color: #191718;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      img {
+        width: 28px;
+      }
+    }
+
+    .sidebar {
+      display: none;
+    }
+
+    .sidebar-open {
+      display: block;
+    }
+
+    .sidebar-close {
+      display: none;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      .footer {
+        height: 79px;
+        text-align: center;
+        margin-top: auto;
+        border-top: solid 1px #dedede;
         line-height: 79px;
       }
     }

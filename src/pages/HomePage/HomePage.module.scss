@@ -2,6 +2,11 @@
   .container {
     display: flex;
     position: relative;
+
+    .menubar {
+      display: none;
+    }
+
     .sidebar {
       width: 150px;
       position: fixed;
@@ -93,13 +98,222 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .sidebar {
-    display: none;
+  .container {
+    .menubar {
+      height: 48px;
+      background-color: #191718;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      img {
+        width: 28px;
+      }
+    }
+
+    .sidebar {
+      display: none;
+    }
+
+    .sidebar-open {
+      display: block;
+    }
+
+    .sidebar-close {
+      display: none;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 100px;
+
+        .logo {
+          img {
+          }
+        }
+
+        &__above {
+          background-color: #efefef;
+          margin: 0 20px;
+          border-radius: 10px;
+          padding: 30px;
+          text-align: center;
+
+          &__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+
+          &__description {
+            font-size: 16px;
+            text-indent: 1em;
+            overflow: hidden;
+          }
+        }
+
+        &__below {
+          background-color: #efefef;
+          margin: 0 20px;
+          border-radius: 10px;
+          padding: 20px;
+          &__list-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            &__item {
+              border-radius: 10px;
+              background-color: #fff;
+              padding: 20px;
+              &__title {
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+              }
+
+              &__description {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+                align-items: center;
+                img {
+                }
+
+                p {
+                  margin: 0;
+                  text-indent: 2em;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .footer {
+        height: 79px;
+        text-align: center;
+        margin-top: auto;
+        border-top: solid 1px #dedede;
+        line-height: 79px;
+      }
+    }
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .sidebar {
-    display: none;
+  .container {
+    .menubar {
+      height: 48px;
+      background-color: #191718;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      img {
+        width: 28px;
+      }
+    }
+
+    .sidebar {
+      display: none;
+    }
+
+    .sidebar-open {
+      display: block;
+    }
+
+    .sidebar-close {
+      display: none;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        .logo {
+          margin-top: 20px;
+
+          img {
+            width: 200px;
+          }
+        }
+
+        &__above {
+          background-color: #efefef;
+          margin: 0 20px;
+          border-radius: 10px;
+          padding: 30px;
+          text-align: center;
+          &__title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+
+            p {
+              margin: 0;
+            }
+          }
+
+          &__description {
+            font-size: 16px;
+            text-indent: 1em;
+            overflow: hidden;
+
+            p {
+              margin: 0;
+            }
+          }
+        }
+
+        &__below {
+          background-color: #efefef;
+          margin: 0 20px;
+          border-radius: 10px;
+          padding: 20px;
+          &__list-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            &__item {
+              border-radius: 10px;
+              background-color: #fff;
+              padding: 20px;
+              &__title {
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+              }
+
+              &__description {
+                img {
+                  float: left;
+                  margin-right: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .footer {
+        height: 79px;
+        text-align: center;
+        margin-top: auto;
+        border-top: solid 1px #dedede;
+        line-height: 79px;
+      }
+    }
   }
 }
