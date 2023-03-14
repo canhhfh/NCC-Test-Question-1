@@ -1,0 +1,36 @@
+.container {
+  background-color: #191718;
+  color: #aaaaaa;
+  padding: 0;
+  height: 100vh;
+
+  .sidebar-list-items {
+    .sidebar-item {
+      font-weight: bold;
+      height: 44px;
+      border-bottom: solid 1px #5c5c5c;
+
+      a {
+        color: #aaaaaa;
+        text-decoration: none;
+
+        .sidebar-item__name {
+          padding: 0 16px;
+          margin: 0;
+          line-height: 44px;
+          text-decoration: none;
+          font-size: 16px;
+
+          &:hover {
+            color: #ffffff;
+            background-color: #5c5c5c;
+          }
+        }
+      }
+
+      a.active {
+        color: white;
+      }
+    }
+  }
+}
