@@ -4,7 +4,11 @@ import styles from "./Footer.module.scss";
 type Props = {};
 
 const Footer = (props: Props) => {
-  return <div></div>;
+  return (
+    <div className={styles["container"]}>
+      <div className={styles["copyright"]}>Copyright © 2023</div>
+    </div>
+  );
 };
 
 export default Footer;

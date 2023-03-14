@@ -11,9 +11,11 @@ const ServicesPage = (props: Props) => {
       <div className={styles["sidebar"]}>
         <Sidebar />
       </div>
-      <div className={styles["content"]}></div>
-      <div className={styles["footer"]}>
-        <Footer />
+      <div className={styles["main"]}>
+        <div className={styles["content"]}></div>
+        <div className={styles["footer"]}>
+          <Footer />
+        </div>
       </div>
     </div>
   );

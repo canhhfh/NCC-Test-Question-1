@@ -1,11 +1,9 @@
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Home from "./pages/HomePage";
 import { Route, Routes } from "react-router-dom";
+import "./App.css";
 import BlogPage from "./pages/BlogPage";
-import NewsPage from "./pages/NewsPage";
 import ContactPage from "./pages/ContactPage";
+import Home from "./pages/HomePage";
+import NewsPage from "./pages/NewsPage";
 import ServicesPage from "./pages/ServicesPage";
 
 function App() {

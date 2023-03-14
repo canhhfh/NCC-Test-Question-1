@@ -29,17 +29,29 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .container {
+    display: flex;
     position: relative;
     .sidebar {
       width: 150px;
       position: fixed;
     }
 
-    .content {
-      height: 1000px;
-    }
+    .main {
+      margin-left: 150px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: 100%;
+      .content {
+      }
 
-    .footer {
+      .footer {
+        height: 79px;
+        margin-top: auto;
+        border-top: solid 1px #dedede;
+        padding-left: 129px;
+        line-height: 79px;
+      }
     }
   }
 }
